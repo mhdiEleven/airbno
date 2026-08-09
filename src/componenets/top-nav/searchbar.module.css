@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    width: 85%;
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50vh;
+    height: 60px;
+    border: solid gray 1px;
+    margin-bottom: 10px;
+    transition: border-color ease 1s , border-width ease-in-out 200ms;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+    &:hover{
+        border: solid black 3px;
+    }
+    
+}
+.search{
+    background-color: transparent;
+    border-color: transparent;
+    height: 40%;
+    margin-right: 5px;
+}
+.form{
+    background-color: white;
+    color: white;
+}
+.text{
+    display: flex;
+    flex-shrink: 1;
+    background-color: white;
+    border:none;
+    color: black !important;
+    outline: none;
+    font-size: 15px;
+    width: fit-content;
+    font-weight: bold;
+    &::placeholder{
+        color: black;
+    }
+}
