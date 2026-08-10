@@ -53,8 +53,10 @@
     background:none;
     transform: translateY(35%) translateX(-10%);
     overflow: hidden;
+
 }
 .active{
+
     height: 100%;
     width: 100%;
 }
