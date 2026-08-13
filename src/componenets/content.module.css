@@ -68,7 +68,9 @@
     padding: 2px;
     border-radius: 50vh;
 }
-
+.card{
+    margin-right: 10px;
+}
 .wrapper{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -79,4 +81,37 @@
 .wrapper::-webkit-scrollbar{
     width: 0;
     height: 0   ;
+}
+.rating{
+    display: flex;
+    position: relative;
+    color: hsl(0deg, 0%, 30%);
+    font-weight: bolder;
+}
+.rating_text{
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+}
+.price{
+    margin-right: 10px;
+}
+.price{
+
+    font-size: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.price::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50vh;
+    background: hsl(0deg,0%,75%);
+    transform: translateX(2px) translateY(4px);
+}
+.star{
+    width: 10px;
+    height: 10px;
 }

@@ -9,10 +9,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
+    "motion": "^13.1.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2"
