@@ -3,13 +3,15 @@ import React, { useState } from 'react'
 import info from './info'
 import { motion } from 'motion/react'   
 export default function Product({ data, liked, change_state }) {
-
-    function handleLike(full_id) {
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    }
+    function handleLike() {
         
         const newlike = liked.includes(data.full_id) ?
             liked.filter(x => x !== data.full_id) :
             [...liked, data.full_id]
-        liked = newlike
         console.log(newlike)
         localStorage.setItem("liked", JSON.stringify(newlike))
         console.log(`like = ${JSON.parse(localStorage.getItem('liked')) }`)
@@ -18,7 +20,9 @@ export default function Product({ data, liked, change_state }) {
 
         change_state(newlike)
     }
-    return (<div className={st.card}>
+    return (<motion.div className={st.card} 
+    variants={item}>
+    
         <div className={st.img_container}>
             <img src={'/products/' + data.src + '.png'} className={st.img} />
 
@@ -44,6 +48,6 @@ export default function Product({ data, liked, change_state }) {
                 <p className={st.rating_text}>{data.rating}</p>
             </div>
         </div>
-    </div>)
+    </motion.div>)
 
 }

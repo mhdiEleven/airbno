@@ -1,0 +1,7 @@
+.fav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fav>*{
+    margin: 10px;
+}

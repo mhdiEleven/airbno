@@ -1,12 +1,12 @@
 
 import { useState } from "react"
-
+import st from "./Favs.module.css"
 import info from "../componenets/info"
 import Product from "../componenets/Product"
 export function Favs(){
     let [liked, change_state] = useState(JSON.parse(localStorage.getItem("liked")) || [])
     liked.filter(x => x !== null)
-    return(<div>
+    return(<div className={st.fav}>
         
             {
             [...liked].reverse().map( p =>{
